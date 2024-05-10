@@ -53,6 +53,13 @@ function App() {
     return oldMinute + 1;
   };
 
+  // const worker = new Worker("worker.js");
+  // worker.postMessage({ interval: 0.001 });
+
+  // self.onmessage = function (e) {
+  //   setInterval(() => {}, e.data.interval);
+  // };
+
   useEffect(() => {
     if (running)
       timerRef.current = setInterval(() => {
@@ -141,7 +148,7 @@ function App() {
             )}
             {showInput && (
               <Button type="primary" onClick={addLab}>
-                Qo{}shish
+                Add
               </Button>
             )}
 
